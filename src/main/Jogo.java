@@ -46,21 +46,35 @@ public class Jogo {
         while (!fimDeJogo) {
             System.out.println("\n" + jogadorAtual.getNome() + ", sua vez!");
             System.out.println("Vida: " + jogadorAtual.getVida() + " | Mana: " + jogadorAtual.getMana());
-            System.out.println("Mão:");
 
+            // Exibir cartas na mão
+            System.out.println("Mão:");
             for (int i = 0; i < jogadorAtual.getMao().size(); i++) {
                 Carta carta = jogadorAtual.getMao().get(i);
                 System.out.println(i + " - " + carta.detalhes());
             }
 
             System.out.println("Escolha uma ação:");
-            System.out.println("1 - Jogar uma carta");
-            System.out.println("2 - Passar a vez");
+            System.out.println("1 - Comprar cartas do deck");
+            System.out.println("2 - Jogar uma carta");
+            System.out.println("3 - Passar a vez");
 
             int escolha = scanner.nextInt();
 
             switch (escolha) {
                 case 1:
+                    if (jogadorAtual.getMao().size() < 5) {
+                        if (!jogadorAtual.getDeck().isEmpty()) {
+                            jogadorAtual.comprarCarta();
+                            System.out.println(jogadorAtual.getNome() + " comprou uma carta.");
+                        } else {
+                            System.out.println("Você não tem mais cartas no deck!");
+                        }
+                    } else {
+                        System.out.println("Sua mão já está cheia! Jogue ou passe a vez.");
+                    }
+                    break;
+                case 2:
                     System.out.println("Escolha o índice da carta:");
                     int indice = scanner.nextInt();
                     if (indice >= 0 && indice < jogadorAtual.getMao().size()) {
@@ -76,17 +90,21 @@ public class Jogo {
                         System.out.println("Índice inválido!");
                     }
                     break;
-                case 2:
+                case 3:
                     System.out.println(jogadorAtual.getNome() + " passou a vez.");
                     break;
                 default:
                     System.out.println("Opção inválida.");
             }
 
-            Jogador temp = jogadorAtual;
-            jogadorAtual = jogadorOponente;
-            jogadorOponente = temp;
+            // Alternar jogadores
+            if (escolha == 3 || escolha == 2) { // Passar vez ou jogar carta troca o turno
+                Jogador temp = jogadorAtual;
+                jogadorAtual = jogadorOponente;
+                jogadorOponente = temp;
+            }
 
+            // Verificar condição de vitória
             if (jogador1.getVida() <= 0 || jogador2.getVida() <= 0) {
                 fimDeJogo = true;
             }

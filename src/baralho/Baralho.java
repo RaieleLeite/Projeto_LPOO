@@ -54,10 +54,10 @@ public class Baralho {
         cartas.add(new Feitico("Barreira de Luz", 4, "Aumenta em 5 a resistência de todas as criaturas aliadas.", 0));
         cartas.add(new Feitico("Dardo Envenenado", 3, "Causa 4 de dano e diminui o poder da criatura em 2.", -4));
         cartas.add(new Feitico("Transformação", 5, "Transforma uma criatura inimiga em uma criatura 1/1.", 0));
-        cartas.add(new Feitico("Chuva de Meteoros", 7, "Causa 10 de dano a todas as criaturas no campo.", 0));
+        cartas.add(new Feitico("Chuva de Meteoros", 7, "Causa 10 de dano a todas as criaturas no campo.", -10));
         cartas.add(new Feitico("Ressurreição", 6, "Revive uma criatura do cemitério.", 0));
         cartas.add(new Feitico("Onda de Choque", 3, "Causa 5 de dano a um oponente.", -5));
-        cartas.add(new Feitico("Maldição da Lua", 4, "Diminui o poder de todas as criaturas inimigas em 3.", 0));
+        cartas.add(new Feitico("Maldição da Lua", 4, "Diminui o poder de todas as criaturas inimigas em 3.", -3));
         cartas.add(new Feitico("Explosão Psíquica", 5, "Causa 8 de dano ao oponente.", -8));
         cartas.add(new Feitico("Encanto de Serenidade", 3, "Remove todos os encantamentos do campo.", 0));
         cartas.add(new Feitico("Planta Venenosa", 2, "Destrói a criatura com menor resistência no campo.", 0));
