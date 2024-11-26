@@ -5,9 +5,11 @@ import java.util.Collections;
 import java.util.List;
 
 import cartas.Carta;
-import cartas.Criatura;
 import cartas.Feitico;
+import cartas.Criatura;
 import cartas.Encantamento;
+
+
 
 public class Baralho {
 
@@ -19,79 +21,132 @@ public class Baralho {
     }
 
     private void gerarCartas() {
-        // Adicionando 20 cartas de Criatura
-        cartas.add(new Criatura("Lobo Sombra", 2, 3, 2, "Rapidez"));
-        cartas.add(new Criatura("Guerreiro da Floresta", 3, 4, 3, "Provocar"));
-        cartas.add(new Criatura("Dragão Flamejante", 5, 7, 5, "Rapidez"));
-        cartas.add(new Criatura("Golias Rochoso", 4, 5, 6, "Provocar"));
-        cartas.add(new Criatura("Fênix do Vale", 6, 6, 4, "Rapidez"));
-        cartas.add(new Criatura("Golem de Ferro", 3, 3, 7, "Provocar"));
-        cartas.add(new Criatura("Espectro Sombrio", 4, 5, 3, "Rapidez"));
-        cartas.add(new Criatura("Berserker da Tempestade", 5, 6, 4, "Rapidez"));
-        cartas.add(new Criatura("Manticora", 5, 5, 6, "Provocar"));
-        cartas.add(new Criatura("Guardião de Cristal", 3, 2, 8, "Provocar"));
-        cartas.add(new Criatura("Unicórnio Celestial", 6, 7, 7, "Rapidez"));
-        cartas.add(new Criatura("Troll das Cavernas", 4, 6, 6, "Provocar"));
-        cartas.add(new Criatura("Hydra das Profundezas", 7, 8, 6, "Rapidez"));
-        cartas.add(new Criatura("Anjo Guardião", 8, 7, 8, "Rapidez"));
-        cartas.add(new Criatura("Demônio da Desolação", 7, 9, 5, "Rapidez"));
-        cartas.add(new Criatura("Minotauro Selvagem", 6, 7, 6, "Provocar"));
-        cartas.add(new Criatura("Serpente Abissal", 5, 6, 5, "Rapidez"));
-        cartas.add(new Criatura("Cavaleiro de Ferro", 4, 5, 5, "Provocar"));
-        cartas.add(new Criatura("Fera das Sombras", 6, 6, 4, "Rapidez"));
-        cartas.add(new Criatura("Guerreiro do Sol", 3, 4, 4, "Rapidez"));
+    	//Deck Pyrathos (Reino de Fogo)
+        //Criaturas
+    	cartas.add(new Criatura("Dragão de Lava", 7, 6, 5));
+    	cartas.add(new Criatura("Fênix Incandescente", 5, 3, 3));
+    	cartas.add(new Criatura("Elemental de Fogo", 4, 4, 2));
+    	cartas.add(new Criatura("Golem de Magma", 6, 5, 4));
+    	cartas.add(new Criatura("Mago Flamívoro", 4, 2, 3));
+    	cartas.add(new Criatura("Estátua de Cinzas", 3, 2, 4));
+    	cartas.add(new Criatura("Dragão de Lava", 7, 6, 5));
+        
+        //Feiticos
+    	cartas.add(new Feitico("Salva de Meteoros", 6, 4));
+    	cartas.add(new Feitico("Labareda Devastadora", 5, 5));
+    	cartas.add(new Feitico("Vulcão Despertado", 8, 2));
+    	cartas.add(new Feitico("Fúria Flamejante", 3, 3));
+    	cartas.add(new Feitico("Estrela Cadente", 4, 3));
+        
+        //Encantamentos
+    	cartas.add(new Encantamento("Forja de Pyrathos", 4, 1));
+    	cartas.add(new Encantamento("Inferno Crescente", 3, 1));
+    	cartas.add(new Encantamento("Aura de Chamas", 3, 2));
+    	cartas.add(new Encantamento("Círculo de Lava", 5, 1));
+        
+        
+        
+        //Deck Eldragor (Reino de Gelo)
+        //Criaturas
+    	cartas.add(new Criatura("Dragão de Gelo Antigo", 7, 5, 6));
+    	cartas.add(new Criatura("Yeti de Eldragor", 4, 3, 4));
+    	cartas.add(new Criatura("Serpente de Neve", 3, 2, 3));
+    	cartas.add(new Criatura("Sentinela Glacial", 5, 2, 6));
+    	cartas.add(new Criatura("Mago do Ártico", 4, 2, 3));
+    	cartas.add(new Criatura("Estátua Glacial", 6, 4, 7));
+        
+        //Feiticos
+    	cartas.add(new Feitico("Tempestade de Gelo", 5, 0));
+    	cartas.add(new Feitico("Geada Mortal", 3, 2));
+    	cartas.add(new Feitico("Congelamento Instantâneo", 2, 0));
+    	cartas.add(new Feitico("Frio Implacável", 4, 0));
+    	cartas.add(new Feitico("Nevasca", 4, 0));
+        
+        //Encantamentos
+    	cartas.add(new Encantamento("Muralha de Gelo", 3, 0));
+    	cartas.add(new Encantamento("Tundra Viva", 4, 1));
+    	cartas.add(new Encantamento("Aura de Gelo", 3, 3));
+        
+        
+        
+        //Deck Sylvanya (Reino da Terra)
+        //Criaturas
+    	cartas.add(new Criatura("Ent Ancião", 6, 4, 7));
+    	cartas.add(new Criatura("Lobo de Sylvanya", 3, 2, 2));
+    	cartas.add(new Criatura("Druida Ancestral", 4, 2, 3));
+    	cartas.add(new Criatura("Árvore Ancestral", 5, 3, 6));
+    	cartas.add(new Criatura("Cervo Místico", 3, 1, 3));
+    	cartas.add(new Criatura("Fera da Floresta", 5, 4, 4));
+    	cartas.add(new Criatura("Guardião da Floresta", 4, 3, 5));
+        
+        //Feiticos
+    	cartas.add(new Feitico("Vinhas Crescentes", 4, 0));
+    	cartas.add(new Feitico("Força da Natureza", 3, 3));
+    	cartas.add(new Feitico("Bênção de Sylvanya", 2, 4));
+    	cartas.add(new Feitico("Renascimento Selvagem", 5, 0));
+    	cartas.add(new Feitico("Raízes Espinhosas", 3, 1));
+    	cartas.add(new Feitico("Chamado da Natureza", 4, 1));
+        
+        //Encantamentos
+    	cartas.add(new Encantamento("Aura de Crescimento", 3, 1));
+        
+        
+        
+        //Deck Umbra (Reino de Umbra)
+        //Criaturas
+    	cartas.add(new Criatura("Espectro Sombrio", 3, 2, 2));
+    	cartas.add(new Criatura("Necromante das Sombras", 5, 2, 3));
+        cartas.add(new Criatura("Assassino de Umbra", 4, 3, 2));
+        cartas.add(new Criatura("Fantasmas da Ruína", 4, 2, 2));
+        cartas.add(new Criatura("Devorador de Almas", 6, 5, 4));
+        cartas.add(new Criatura("Senhor das Sombras", 7, 6, 6));
+        cartas.add(new Criatura("Cavaleiro Espectral", 4, 3, 3));
+        
+        //Feiticos
+        cartas.add(new Feitico("Feitiço de Tormento", 3, 0));
+        cartas.add(new Feitico("Nuvem de Trevas", 4, 0));
+        cartas.add(new Feitico("Poço de Desespero", 5, 1));
+        cartas.add(new Feitico("Feitiço de Corrupção", 4, 0));
+        cartas.add(new Feitico("Feitiço de Agonia", 3, 1));
+        cartas.add(new Feitico("Drenagem de Vida", 4, 3));
+        cartas.add(new Feitico("Manipulação Sombria", 6, 0));
+        
+        //Encantamentos
+        cartas.add(new Encantamento("Poço de Desespero", 5, 1));
+        cartas.add(new Encantamento("Marca da Perdição", 2, 2));
+        
+        
+        
+        // Deck Lumenia (Reino de Luz)
+        // Criaturas
+        cartas.add(new Criatura("Cavaleiro da Aurora", 4, 3, 3));
+        cartas.add(new Criatura("Arcanjo Luminoso", 7, 5, 7));
+        cartas.add(new Criatura("Guerreiro da Luz", 3, 2, 3));
+        cartas.add(new Criatura("Sacerdote Solar", 3, 1, 4));
+        cartas.add(new Criatura("Guerreiro Celestial", 4, 3, 3));
+        cartas.add(new Criatura("Guardião do Sol", 5, 4, 5));
 
-        // Adicionando 20 cartas de Feitiço
-        cartas.add(new Feitico("Raio de Fogo", 3, "Causa 5 de dano ao oponente.", -5));
-        cartas.add(new Feitico("Cura Rápida", 2, "Recupera 5 pontos de vida.", 5));
-        cartas.add(new Feitico("Explosão Mágica", 4, "Causa 7 de dano a todas as criaturas inimigas.", 0)); // Este afeta criaturas, não vidas.
-        cartas.add(new Feitico("Feitiço do Gelo", 3, "Congela uma criatura por 2 turnos.", 0));
-        cartas.add(new Feitico("Tempestade Elétrica", 5, "Causa 6 de dano a todas as criaturas no campo.", 0));
-        cartas.add(new Feitico("Veneno Mortal", 2, "Destrói uma criatura inimiga.", 0));
-        cartas.add(new Feitico("Escudo Místico", 3, "Previne todo dano neste turno.", 0));
-        cartas.add(new Feitico("Chama Divina", 4, "Causa 6 de dano a um oponente.", -6));
-        cartas.add(new Feitico("Fórmula de Invisibilidade", 2, "Faz com que uma criatura não possa ser atacada por 1 turno.", 0));
-        cartas.add(new Feitico("Barreira de Luz", 4, "Aumenta em 5 a resistência de todas as criaturas aliadas.", 0));
-        cartas.add(new Feitico("Dardo Envenenado", 3, "Causa 4 de dano e diminui o poder da criatura em 2.", -4));
-        cartas.add(new Feitico("Transformação", 5, "Transforma uma criatura inimiga em uma criatura 1/1.", 0));
-        cartas.add(new Feitico("Chuva de Meteoros", 7, "Causa 10 de dano a todas as criaturas no campo.", -10));
-        cartas.add(new Feitico("Ressurreição", 6, "Revive uma criatura do cemitério.", 0));
-        cartas.add(new Feitico("Onda de Choque", 3, "Causa 5 de dano a um oponente.", -5));
-        cartas.add(new Feitico("Maldição da Lua", 4, "Diminui o poder de todas as criaturas inimigas em 3.", -3));
-        cartas.add(new Feitico("Explosão Psíquica", 5, "Causa 8 de dano ao oponente.", -8));
-        cartas.add(new Feitico("Encanto de Serenidade", 3, "Remove todos os encantamentos do campo.", 0));
-        cartas.add(new Feitico("Planta Venenosa", 2, "Destrói a criatura com menor resistência no campo.", 0));
-        cartas.add(new Feitico("Revitalização", 4, "Recupera 10 pontos de vida.", 10));
+        // Feiticos
+        cartas.add(new Feitico("Raio de Sol", 3, 2));
+        cartas.add(new Feitico("Cura Sagrada", 4, 0));
+        cartas.add(new Feitico("Escudo de Luz", 3, 0));
+        cartas.add(new Feitico("Bênção do Sol", 5, 0));
 
-        // Adicionando 20 cartas de Encantamento
-        cartas.add(new Encantamento("Aura de Força", 3, "Aumenta o poder de todas as criaturas aliadas em 2."));
-        cartas.add(new Encantamento("Bênção de Vigor", 2, "Aumenta a resistência de uma criatura em 3."));
-        cartas.add(new Encantamento("Domínio das Sombras", 4, "Diminui o poder das criaturas inimigas em 2."));
-        cartas.add(new Encantamento("Selo de Proteção", 3, "Previne 3 de dano a cada turno."));
-        cartas.add(new Encantamento("Fúria do Caçador", 4, "Aumenta o poder de uma criatura em 4."));
-        cartas.add(new Encantamento("Cegueira Prolongada", 2, "Impede que uma criatura ataque por 2 turnos."));
-        cartas.add(new Encantamento("Escudo Imortal", 5, "Previne todo dano recebido por uma criatura."));
-        cartas.add(new Encantamento("Reflexo Mágico", 3, "Causa 2 de dano ao oponente sempre que ele jogar uma carta."));
-        cartas.add(new Encantamento("Luz da Vitória", 4, "Aumenta o poder de todas as criaturas aliadas em 3."));
-        cartas.add(new Encantamento("Coração de Ferro", 3, "Aumenta a resistência de todas as criaturas aliadas em 3."));
-        cartas.add(new Encantamento("Olhar de Águia", 2, "Aumenta o poder de uma criatura em 1."));
-        cartas.add(new Encantamento("Ritual do Sacrifício", 4, "Permite ao jogador comprar 2 cartas adicionais por turno."));
-        cartas.add(new Encantamento("Força Ancestral", 5, "Aumenta o poder de todas as criaturas aliadas em 4."));
-        cartas.add(new Encantamento("Selo da Ressurreição", 6, "Revive uma criatura aleatória do cemitério no final do turno."));
-        cartas.add(new Encantamento("Escudo da Fênix", 4, "Previne 2 de dano a cada turno."));
-        cartas.add(new Encantamento("Cura do Espírito", 3, "Recupera 2 pontos de vida por turno."));
-        cartas.add(new Encantamento("Chama Eterna", 5, "Causa 3 de dano a todas as criaturas inimigas por turno."));
-        cartas.add(new Encantamento("Escudo de Cristal", 3, "Previne 3 de dano a cada turno."));
-        cartas.add(new Encantamento("Manto do Feiticeiro", 4, "Aumenta o poder de feitiços jogados pelo jogador em 2."));
-        cartas.add(new Encantamento("Força Divina", 6, "Aumenta o poder e a resistência de todas as criaturas aliadas em 3."));
+        // Encantamentos
+        cartas.add(new Encantamento("Campo de Luz", 4, 2));
+        cartas.add(new Encantamento("Aura Divina", 6, 1));
+    
+
     
         // Embaralhar cartas
         Collections.shuffle(cartas);
     }
 
     public List<Carta> sortearCartas(int quantidade) {
-        List<Carta> sorteadas = new ArrayList<>(cartas.subList(0, quantidade));
-        cartas.removeAll(sorteadas);
+        List<Carta> sorteadas = new ArrayList<>();
+        for (int i = 0; i < quantidade; i++) {
+            sorteadas.add(cartas.get(i)); // Aqui você pode modificar o algoritmo para sortear aleatoriamente
+        }
         return sorteadas;
     }
 }

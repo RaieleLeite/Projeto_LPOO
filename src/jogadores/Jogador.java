@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Jogador {
     private String nome;
-    private int vida = 30;
-    private int mana = 10;
+    private int vida = 50;
+    private int mana = 5;
     private List<Carta> deck = new ArrayList<>();
     private List<Carta> mao = new ArrayList<>();
 
